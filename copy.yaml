@@ -7,5 +7,5 @@
         dest: /var/lib/tomcat9/conf/webapps/java-example.war
     - name: restart tomcat service
       service:
-        name: tomcat
+        name: tomcat9
         state: restarted 
