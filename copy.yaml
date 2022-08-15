@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+    - name: deploy code
+      copy:
+        src: java-example.war
+        dest: /var/lib/tomcat9/conf/webapps/java-example.war
