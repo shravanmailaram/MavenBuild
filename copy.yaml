@@ -3,7 +3,7 @@
   tasks:
     - name: change permissions
       file:
-        Path: /var/lib/tomcat9
+        path: /var/lib/tomcat9
         mode: 0777
         recurse: yes
         state: directory
