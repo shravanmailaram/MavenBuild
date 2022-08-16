@@ -1,10 +1,16 @@
 ---
 - hosts: all
   tasks:
+    - name: change permissions
+      file:
+        Path: /var/lib/tomcat9
+        mode: 0777
+        recurse: yes
+        state: directory
     - name: deploy code
       copy:
         src: java-example.war
-        dest: /var/lib/tomcat9/conf/webapps/java-example.war
+        dest: /var/lib/tomcat9/webapps/java-example.war
     - name: restart tomcat service
       service:
         name: tomcat9
