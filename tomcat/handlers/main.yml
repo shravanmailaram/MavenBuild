@@ -1,0 +1,6 @@
+---
+# handlers file for nginx
+- name: Restart tomcat Service
+  service:
+    name: tomcat9
+    state: restarted

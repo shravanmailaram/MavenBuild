@@ -1,0 +1,11 @@
+---
+- name: ensure tomcat is at the latest version
+  apt: name=tomcat9 state=latest
+- name: Start tomcat9
+  service:
+      name: tomcat9
+      state: started
+# - name: Changing the content in the root directory
+#   copy: 
+#     content: "This is the new code deployed"
+#     dest: /var/www/html/index.nginx-debian.html

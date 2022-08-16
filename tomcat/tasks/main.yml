@@ -1,0 +1,4 @@
+---
+- include: tomcat.yml
+- include: deploy_code_with_copy.yml
+

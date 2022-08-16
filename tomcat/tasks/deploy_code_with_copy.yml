@@ -1,0 +1,7 @@
+---
+- name: Deploy Code with Copy
+  copy:
+    src: java-example.war
+    dest: /var/lib/tomcat9/webapps/java-example.war
+  notify: Restart tomcat Service
+    
