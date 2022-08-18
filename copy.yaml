@@ -7,7 +7,7 @@
         dest: /var/lib/tomcat9/webapps/java-example.war
     - name: permissions
       file:
-        name: permissions
+        name: permission
         path: /var/lib/tomcat9/webapps
         mode: 0777
         state: present
