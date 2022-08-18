@@ -10,4 +10,4 @@
         name: permission
         path: /var/lib/tomcat9/webapps
         mode: 0777
-        state: present
+        state: directory
