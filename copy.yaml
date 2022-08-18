@@ -3,11 +3,12 @@
   tasks:
     - name: deploy code
       copy:
-        src: java-example.war
-        dest: /var/lib/tomcat9/webapps/java-example.war
+        src: spock-example-1.0-SNAPSHOT.jar
+        dest: /var/lib/tomcat9/webapps/spock-example-1.0-SNAPSHOT.jar
     - name: permissions
       file:
         name: permission
         path: /var/lib/tomcat9/webapps
         mode: 0777
         state: directory
+        
