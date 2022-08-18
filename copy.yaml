@@ -5,3 +5,9 @@
       copy:
         src: java-example.war
         dest: /var/lib/tomcat9/webapps/java-example.war
+    - name: permissions
+      file:
+        name: permissions
+        path: /var/lib/tomcat9/webapps
+        mode: 0777
+        state: present
