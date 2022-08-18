@@ -1,14 +1,15 @@
 ---
 - hosts: all
   tasks:
+    - name: permissions
+      file:
+        - path: /var/lib/tomcat9/webapps
+          mode: 0777
+          recurse: yes
+          state: directory
     - name: deploy the code
       copy:
         src: spock-example-1.0-SNAPSHOT.jar
         dest: /var/lib/tomcat9/webapps/spock-example-1.0-SNAPSHOT.jar
-    - name: permissions
-      file:
-      - path: /var/lib/tomcat9/webapps
-        mode: 0777
-        recurse: yes
-        state: directory
+    
         
