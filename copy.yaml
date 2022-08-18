@@ -11,3 +11,8 @@
         path: /var/lib/tomcat9/conf/webapps
         mode: 0777
         state: directory
+
+    - name: Restart tomcat Service
+      service:
+        name: tomcat9 
+        state: restarted
